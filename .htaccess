@@ -1,0 +1,28 @@
+# Use PHP56 as default
+AddHandler application/x-httpd-php56 .php
+
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName hakancem.com
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+# Set PHP handler to application/x-httpd-phpbeta on Wed Jan 13 00:09:19 MST 2016.
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

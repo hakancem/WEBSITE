@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Webmoney</title>
+<script src="//merchant.webmoney.ru/conf/lib/wm-simple-x20.min.js?lang=en&wmid=108433782023&purse=Z753140074438&key=980426624&amount=25.00&desc=Hakan+Cem+WebMoney" id="wm-script"></script>
+</head>
+<body>
+<form action="https://merchant.webmoney.ru/lmi/payment.asp" method="POST">
+ <input type="hidden" name="LMI_PAYMENT_AMOUNT" value="25.00">
+ <input type="hidden" name="LMI_PAYMENT_DESC_BASE64" value="SGFrYW4gQ2VtIFdlYk1vbmV5">
+ <input type="hidden" name="LMI_PAYEE_PURSE" value="Z753140074438">
+<input type="submit" class="wmbtn" style="font-famaly:Verdana, Helvetica, sans-serif!important;padding:0 10px;height:30px;font-size:12px!important;border:1px solid #538ec1!important;background:#a4cef4!important;color:#fff!important;" value="Pay25.00 WMZ ">
+</form>
+</body>
+</html>
